@@ -1,0 +1,43 @@
+<%- include('index.ejs') %>
+<div class="card card-outline-secondary" style="position: absolute; top: 100px; left: 750px; width: 500px;">
+  <div class="card-header">
+      <h3 class="mb-0">Add Product</h3>
+  </div>
+  <div class="card-body">
+<form class="form" role="form" action="/create/product" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name</label>
+      <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name of Product">
+    </div>
+<div class="form-group">
+    <label for="exampleFormControlSelect1">Categories</label>
+    <select class="form-control" name="category_id" id="exampleFormControlSelect1" style="height:30px">
+    <option selected>Select category</option>
+    <% for(let category of categories){ %>
+      <option value="<%=category.id%>" ><%=category.name%></option>
+    <%}%>
+    </select>
+    
+  </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Description</label>
+      <textarea name="description" class="form-control" id="exampleInputPassword1" placeholder="Enter Product description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleCheck1">Price</label>
+      <input type="number" name="price" class="form-control" id="exampleCheck1" placeholder="enter price">
+      
+    </div>
+
+    <div class="form-group">
+    <label for="exampleFormControlFile1">Image</label>
+    <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+  <div class="form-group">
+    <input type="checkbox" name="show_on_home" id="home">
+    <label class="form-check-label" for="home">Show On Home</label>
+  </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+  </div>

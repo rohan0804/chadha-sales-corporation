@@ -14,6 +14,22 @@ const Product = sequelize.define("product", {
     type: Sequelize.INTEGER,
     allowNull: false,
   },
+  show_on_home:{
+    type:Sequelize.BOOLEAN,
+    defaultValue:0
+  },
+  image:{
+    type:Sequelize.STRING,
+    
+    allowNull:false
+  },
+  category_id:{
+    type:Sequelize.DataTypes.INTEGER,
+    references:{
+      model:'categories',
+      key:'id'
+    }
+  }
 });
 
 module.exports = Product;
