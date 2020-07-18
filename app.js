@@ -30,6 +30,10 @@ app.get("/", (req, res, next) => {
   //   res.send("<h1>chadda sales corporations</h1>");
   res.render("homepage");
 });
+app.get("/aboutus", (req, res, next) => {
+  //   res.send("<h1>chadda sales corporations</h1>");
+  res.render("aboutus");
+});
 app.listen(2000, (req, res) => {
   console.log(`server is listening at port ${port}`);
 });
