@@ -2,21 +2,31 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const sequelize = require("./utils/database");
+const passport = require("passport");
 const expressLayouts = require("express-ejs-layouts");
+const adminRoutes = require("./routes/admin");
 const Category = require("./models/category");
 const Product = require("./models/product");
+const User = require("./models/user");
+const Role = require("./models/roles");
+const cookieParser = require("cookie-parser");
+app.use(cookieParser());
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+require("./utils/passportconfig")(passport);
+app.use(passport.initialize());
 app.set("view engine", "ejs");
 app.set("views", "views");
 
 app.use(express.static("public"));
 app.use(expressLayouts);
-
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(adminRoutes);
 
 Product.belongsTo(Category, { foreignKey: "category_id" });
+
 sequelize
-  .sync()
+  .sync({ alter: true })
   .then((result) => {
     // console.log(result);
   })

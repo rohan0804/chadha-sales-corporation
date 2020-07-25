@@ -60,3 +60,11 @@ ml1 {
   display: inline-block;
   line-height: 1em;
 }
+
+.greet {
+  margin-bottom: 1.2rem;
+  font-size: 4em;
+  font-weight: 500;
+  line-height: 2.2;
+  text-align: center;
+}
