@@ -4,7 +4,7 @@
   </div>
   <ul>
     <li><a href="/home" class="active">Home</a></li>
-    <li><a href="#">Products</a></li>
+    <li><a href="/products">Products</a></li>
     <li><a href="/aboutus">About Us</a></li>
     <li>
       <a href="#" data-toggle="modal" data-target="#exampleModal">Contact Us</a>
@@ -20,12 +20,15 @@
   aria-labelledby="exampleModalLabel"
   aria-hidden="true"
 >
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
-          <b>Contact Information :</b>
-        </h5>
+        <h3 class="modal-title" id="exampleModalLabel">
+          <!-- <b class="text-primary">Contact Information :</b> -->
+          <div class="alert alert-primary" role="alert">
+            Contact Information
+          </div>
+        </h3>
         <button
           type="button"
           class="close"
@@ -36,43 +39,85 @@
         </button>
       </div>
       <div class="modal-body">
-        <table>
-          <tr>
-            <th colspan="2">Mobile Number :</th>
-            <th></th>
-            <th></th>
-          </tr>
-          <tr>
-            <td></td>
-            <td>9896083791</td>
-            <td></td>
-            <td>9466289134</td>
-          </tr>
-          <tr>
-            <th>Landline :</th>
-            <th></th>
-            <th></th>
-            <th></th>
-          </tr>
-          <tr>
-            <td></td>
-            <td>
-              01712520081
-            </td>
-          </tr>
-          <tr>
-            <th>Address :</th>
-          </tr>
-          <tr>
-            <td></td>
-            <td colspan="3">
-              908, Friends Colony, Model Town Amabala City 134003 (Punjab)
-            </td>
-          </tr>
-        </table>
+        <div class="alert alert-success" role="alert">
+          <h2 class="alert-heading" style="text-align: center;">
+            We Love To Hear From You
+          </h2>
+          <!-- <p>
+            Aww yeah, you successfully read this important alert message. This
+            example text is going to run a bit longer so that you can see how
+            spacing within an alert works with this kind of content.
+          </p>
+          <hr />
+          <p class="mb-0">
+            Whenever you need to, be sure to use margin utilities to keep things
+            nice and tidy.
+          </p> -->
+        </div>
       </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.771294699698!2d76.79614601510319!3d30.357449081769524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc9b48b5cf4ed%3A0x225c683d618045ca!2sSai%20Mandir%20Rd%2C%20Virat%20Nagar%2C%20Model%20Town%2C%20Ambala%2C%20Haryana!5e0!3m2!1sen!2sin!4v1595681875989!5m2!1sen!2sin"
+        height="450"
+        frameborder="0"
+        style="border: 0;"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe>
+      <section id="contact" style="height: 32vh;">
+        <div class="container">
+          <h3 class="text-center text-uppercase">contact us</h3>
+          <p class="text-center w-75 m-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+            interdum purus at sem ornare sodales. Morbi leo nulla, pharetra vel
+            felis nec, ullamcorper condimentum quam.
+          </p>
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+              <div class="card border-0">
+                <div class="card-body text-center">
+                  <i class="fa fa-phone fa-5x mb-3" aria-hidden="true"></i>
+                  <h4 class="text-uppercase mb-5">call us</h4>
+                  <p class="contact-info">+91 9466289134,+91 7988293287</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+              <div class="card border-0">
+                <div class="card-body text-center">
+                  <!-- <i class="fa fa-map-marker fa-5x mb-3" aria-hidden="true"></i> -->
+                  <i class="fa fa-whatsapp fa-5x mb-3" aria-hidden="true"></i>
+                  <h4 class="text-uppercase mb-5">whatsapp</h4>
+                  <address class="contact-info">+91 9896083791</address>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+              <div class="card border-0">
+                <div class="card-body text-center">
+                  <i class="fa fa-map-marker fa-5x mb-3" aria-hidden="true"></i>
+                  <h4 class="text-uppercase mb-5">office loaction</h4>
+                  <address class="contact-info">
+                    908,Friends Colony, Model Town, Ambala City 133001
+                  </address>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 my-5">
+              <div class="card border-0">
+                <div class="card-body text-center">
+                  <i class="fa fa-envelope fa-5x mb-3" aria-hidden="true"></i>
+                  <h4 class="text-uppercase mb-5">email</h4>
+                  <p class="contact-info">virbikram@gmail.com</p>
+                  <p class="contact-info">virbikram@yahoo.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+        <button type="button" class="btn-lg btn-danger" data-dismiss="modal">
           Close
         </button>
       </div>

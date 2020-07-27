@@ -54,6 +54,6 @@ nav ul li a .active,
 nav ul li a:hover {
   color: rgb(24, 38, 240);
   /* border-bottom: 2px solid blueviolet; */
-  font-size: 20px;
+  /* font-size: 20px; */
   opacity: 0.5;
 }
