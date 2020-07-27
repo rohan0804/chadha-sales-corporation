@@ -36,9 +36,16 @@ sequelize
 
 let port = 2000;
 
-app.get("/", (req, res, next) => {
+app.get("/", async (req, res, next) => {
   //   res.send("<h1>chadda sales corporations</h1>");
-  res.render("homepage");
+  const result=[];
+  const categories = await Category.findAll();
+  categories.map((category)=>{
+    result.push(category.dataValues);
+  }) 
+  res.render("homepage",{
+    categories:result
+  });
 });
 app.get("/aboutus", (req, res, next) => {
   //   res.send("<h1>chadda sales corporations</h1>");

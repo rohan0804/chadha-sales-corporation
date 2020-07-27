@@ -136,7 +136,8 @@
 </div>
 
 <div style="float: left; padding: 30px; display: flex; margin-left: 9em;">
-  <div
+<% for(let category of categories){ %>
+<a href="/product/<%=category.id%>" style="color: red;"><div
     class="container main_div"
     style="
       box-shadow: 5px 5px 5px 2px #ccc;
@@ -162,7 +163,7 @@
       <div class="requirement">
         <span class="text-small text-bold text-uppercase">CATEGORY TYPE</span>
         <span class="text-large" style="margin-left: 42px;"
-          >Loading Saddle</span
+          ><%=category.name%></span
         >
       </div>
       <div class="requirement">
@@ -179,6 +180,9 @@
     <hr style="background-color: #e9e7e1; height: 2px;" />
     <div class="section"></div>
   </div>
+  </a>
+ <%}%>
+  <!-- <a>
   <div
     class="container main_div"
     style="
@@ -285,8 +289,8 @@
         background-size: contain;
         font-weight: bolder;
       "
-    ></h2>
-    <div class="section" style="text-align: left; margin: 16px 25px;">
+    ></h2> -->
+    <!-- <div class="section" style="text-align: left; margin: 16px 25px;">
       <div class="requirement">
         <span class="text-small text-bold text-uppercase">TYPE</span>
         <span class="text-large" style="margin-left: 138px;">Accessiories</span>
@@ -303,8 +307,8 @@
       </div>
     </div>
     <hr style="background-color: #e9e7e1; height: 2px;" />
-  </div>
-</div>
+  </div> -->
+</div> 
 <section style="background: beige; margin-top: -13em; height: 35vh;">
   <div
     style="

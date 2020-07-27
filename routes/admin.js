@@ -5,7 +5,7 @@ const passport = require('passport');
 router.post('/login',adminController.postLogin);
 router.post('/signup',adminController.postSignup);
 router.get('/login',adminController.getLogin);
-router.get('/product',adminController.getProducts);
+router.get('/product/:category',adminController.getProducts);
 router.get('/create/product',adminController.getCreateProduct);
 router.post('/create/product',adminController.postCreateProduct);
 router.get('/admin',(req,res)=>{
