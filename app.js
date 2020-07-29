@@ -23,7 +23,7 @@ app.use(express.static("public"));
 app.use(expressLayouts);
 app.use(adminRoutes);
 
-Product.belongsTo(Category, { foreignKey: "category_id" });
+Product.belongsTo(Category, {as:'categories', foreignKey: "category_id" });
 
 sequelize
   .sync({ alter: true })
@@ -51,10 +51,7 @@ app.get("/aboutus", (req, res, next) => {
   //   res.send("<h1>chadda sales corporations</h1>");
   res.render("aboutus");
 });
-app.get("/home", (req, res, next) => {
-  //   res.send("<h1>chadda sales corporations</h1>");
-  res.render("homepage");
-});
+
 app.get("/products", (req, res, next) => {
   res.render("product");
 });

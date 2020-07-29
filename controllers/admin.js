@@ -6,6 +6,7 @@ const Role = require("../models/roles");
 const emailValidate = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const Utils = require("../utils/Utils");
 const multer = require('multer');
+const { model } = require("../utils/database");
 // const { where } = require("sequelize/types");
 module.exports = {
     postLogin: async (req, res) => {
@@ -132,7 +133,6 @@ module.exports = {
         categories.map((category)=>{
             result.push(category.dataValues);
         })
-        console.log(result);
         res.render('addProduct',{
             categories:result
         });
@@ -167,22 +167,26 @@ module.exports = {
         try {
           let condition={};
           let result=[];
+          let categories = [];
+          let final;
           let category = req.params.category!==undefined ? req.params.category : undefined;
-          console.log(category)
           if(category!==undefined && category!='all'){
               condition.category_id = category;
           }
+          const products = await Product.findAll({where:condition,include:{model:Category,as:'categories'},group:['category_id','id']});
           
-          
-          const products = await Product.findAll({where:condition});
           products.map((product)=>{
               result.push(product.dataValues);
           })
+          for(let final of result){
+              categories.push(final.categories.dataValues.name);
+          }
           res.render('product',{
-              products:result
+              products:result,
+              categories:[...new Set(categories)]
           })
         } catch (error) {
             console.log(error.message)
         }
-    }
+    },
 };
