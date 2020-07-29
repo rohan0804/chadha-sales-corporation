@@ -1,17 +1,67 @@
-<nav>
-  <div class="logo">
+<!-- <nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
     <img src="/images/smalllogo.jpg" alt="" />
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li><a class="nav-item" href="#" class="active">Home</a></li>
+      <li><a class="nav-item" href="#">Products</a></li>
+      <li><a class="nav-item" href="#">About Us</a></li>
+      <li><a class="nav-item" href="#" data-toggle="modal" data-target="#exampleModal">Contact Us</a></li>
+    </ul>
   </div>
-  <ul>
-    <li><a href="/" class="active">Home</a></li>
+</nav>
+ -->
+ <style>
+   nav{
+    box-sizing: 
+    border-box;transition:0.5s;
+    background:linear-gradient(45deg, black, transparent);
+   }
+   nav ul li a {
+  line-height: 80px;
+  font-size: larger;
+  color: burlywood;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+nav ul li a .active,
+nav ul li a:hover {
+  color: rgb(24, 38, 240);
+  /* border-bottom: 2px solid blueviolet; */
+  /* font-size: 20px; */
+  opacity: 0.5;
+}
+ </style>
+ <nav 
+ class="navbar navbar-expand-lg navbar-light bg-light" >
+ <a class="navbar-brand" href="#">
+  <img style="width: 40%;height: 150%;" 
+  src="/images/smalllogo.jpg" alt="" /></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="float: right;margin: 0;padding: 0;display: flex;">
+      <li><a href="/" class="active">Home</a></li>
     <li><a href="/product/all">Products</a></li>
     <li><a href="/aboutus">About Us</a></li>
     <li>
       <a href="#" data-toggle="modal" data-target="#exampleModal">Contact Us</a>
     </li>
-  </ul>
+    </ul>
+  </div>
 </nav>
 
+
+<!-- data-toggle="modal" data-target="#exampleModal" -->
 <div
   class="modal fade"
   id="exampleModal"
@@ -64,7 +114,7 @@
         aria-hidden="false"
         tabindex="0"
       ></iframe>
-      <section id="contact" style="height: 32vh;">
+      <!-- <section id="contact" style="height: 32vh;"> -->
         <div class="container">
           <h3 class="text-center text-uppercase">contact us</h3>
           <p class="text-center w-75 m-auto">
@@ -115,12 +165,14 @@
             </div>
           </div>
         </div>
-      </section>
+      <!-- </section> -->
+    
       <div class="modal-footer">
         <button type="button" class="btn-lg btn-danger" data-dismiss="modal">
           Close
         </button>
       </div>
+    
     </div>
   </div>
 </div>
