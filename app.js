@@ -26,7 +26,7 @@ app.use(adminRoutes);
 Product.belongsTo(Category, { foreignKey: "category_id" });
 
 sequelize
-  .sync({ alter: true })
+  .sync()
   .then((result) => {
     // console.log(result);
   })
@@ -38,13 +38,13 @@ let port = 2000;
 
 app.get("/", async (req, res, next) => {
   //   res.send("<h1>chadda sales corporations</h1>");
-  const result=[];
+  const result = [];
   const categories = await Category.findAll();
-  categories.map((category)=>{
+  categories.map((category) => {
     result.push(category.dataValues);
-  }) 
-  res.render("homepage",{
-    categories:result
+  });
+  res.render("homepage", {
+    categories: result,
   });
 });
 app.get("/aboutus", (req, res, next) => {
