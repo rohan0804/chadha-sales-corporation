@@ -136,52 +136,53 @@
 </div>
 
 <div style="float: left; padding: 30px; display: flex; margin-left: 9em;">
-<% for(let category of categories){ %>
-<a href="/product/<%=category.id%>" style="color: red;"><div
-    class="container main_div"
-    style="
-      box-shadow: 5px 5px 5px 2px #ccc;
-      width: 358px;
-      margin-left: 10px;
-      height: 29em;
-    "
-  >
-    <h2
-      class="text-center"
+  <% for(let category of categories){ %>
+  <a href="/product/<%=category.id%>" style="color: red;"
+    ><div
+      class="container main_div"
       style="
-        padding: 65px;
-        background-repeat: no-repeat;
-        color: white;
-        background-image: url('/images/loading_saddle.jpg');
-        height: 180px;
-        font-weight: 400;
-        background-size: contain;
-        font-weight: bolder;
+        box-shadow: 5px 5px 5px 2px #ccc;
+        width: 358px;
+        margin-left: 10px;
+        height: 29em;
       "
-    ></h2>
-    <div class="section" style="text-align: left; margin: 16px 25px;">
-      <div class="requirement">
-        <span class="text-small text-bold text-uppercase">CATEGORY TYPE</span>
-        <span class="text-large" style="margin-left: 42px;"
-          ><%=category.name%></span
-        >
+    >
+      <h2
+        class="text-center"
+        style="
+          padding: 65px;
+          background-repeat: no-repeat;
+          color: white;
+          background-image: url('<%=category.image%>');
+          height: 180px;
+          font-weight: 400;
+          background-size: contain;
+          font-weight: bolder;
+        "
+      ></h2>
+      <div class="section" style="text-align: left; margin: 16px 25px;">
+        <div class="requirement">
+          <span class="text-small text-bold text-uppercase">CATEGORY TYPE</span>
+          <span class="text-large" style="margin-left: 42px;"
+            ><%=category.name%></span
+          >
+        </div>
+        <div class="requirement">
+          <span class="text-uppercase text-small text-bold"
+            >Monthly Contribution</span
+          >
+          <span class="text-large" style="margin-left: 30px;">$600.00</span>
+        </div>
+        <div class="requirement">
+          <span class="text-uppercase text-small text-bold">Horizon</span>
+          <span class="text-large" style="margin-left: 140px;">8 Years</span>
+        </div>
       </div>
-      <div class="requirement">
-        <span class="text-uppercase text-small text-bold"
-          >Monthly Contribution</span
-        >
-        <span class="text-large" style="margin-left: 30px;">$600.00</span>
-      </div>
-      <div class="requirement">
-        <span class="text-uppercase text-small text-bold">Horizon</span>
-        <span class="text-large" style="margin-left: 140px;">8 Years</span>
-      </div>
+      <hr style="background-color: #e9e7e1; height: 2px;" />
+      <div class="section"></div>
     </div>
-    <hr style="background-color: #e9e7e1; height: 2px;" />
-    <div class="section"></div>
-  </div>
   </a>
- <%}%>
+  <%}%>
   <!-- <a>
   <div
     class="container main_div"
@@ -290,7 +291,7 @@
         font-weight: bolder;
       "
     ></h2> -->
-    <!-- <div class="section" style="text-align: left; margin: 16px 25px;">
+  <!-- <div class="section" style="text-align: left; margin: 16px 25px;">
       <div class="requirement">
         <span class="text-small text-bold text-uppercase">TYPE</span>
         <span class="text-large" style="margin-left: 138px;">Accessiories</span>
@@ -308,7 +309,7 @@
     </div>
     <hr style="background-color: #e9e7e1; height: 2px;" />
   </div> -->
-</div> 
+</div>
 <section style="background: beige; margin-top: -13em; height: 35vh;">
   <div
     style="
